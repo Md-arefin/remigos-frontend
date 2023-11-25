@@ -5,7 +5,7 @@ const Navbar = () => {
         <div>
             <div className="p-2 bg-white">
                 <div className="mx-auto w-10">
-                    <a className="btn btn-ghost text-sky-500 text-xl md:text-2xl lg:text-3xl font-serif">Remigos</a>
+                    <a href="/" className="btn btn-ghost text-sky-500 text-xl md:text-2xl lg:text-3xl font-serif">Remigos</a>
                 </div>     
             </div>
         </div>
