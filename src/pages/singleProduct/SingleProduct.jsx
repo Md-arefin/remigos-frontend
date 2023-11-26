@@ -1,13 +1,12 @@
 import React from 'react';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
-import { Link } from 'react-router-dom';
 
-const ProductDetails = ({ product }) => {
-
+const SingleProduct = (product) => {
     const { _id, category, img, name, price, ratings, seller, shipping, stock } = product;
+
     return (
-        <div className='py-2'>
+        <div className=''>
             <div className="card w-96 h-[650px] bg-base-100 shadow-xl hover:mt-[-15px]">
                 <figure>
                     <img src={img} alt={name} />
@@ -20,15 +19,14 @@ const ProductDetails = ({ product }) => {
                         <span>{ratings}</span>
                         <Rating style={{ maxWidth: 120 }} value={ratings} readOnly />
                     </p>
-                    <Link to={`/product/${_id}`}>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Details</button>
-                        </div>
-                    </Link>
+
+                    <div className="card-actions justify-end">
+                        <button className="btn btn-primary">Details</button>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default ProductDetails;
+export default SingleProduct;
