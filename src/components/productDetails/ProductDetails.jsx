@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const ProductDetails = ({ product }) => {
 
-    const { _id, category, img, name, price, ratings, seller, shipping, stock } = product;
+    const { id, category, img, name, price, ratings, seller, shipping, stock } = product;
     return (
         <div className='py-2'>
             <div className="card w-96 h-[650px] bg-base-100 shadow-xl rounded-lg hover:mt-[-0px] hover:scale-105">
@@ -21,7 +21,7 @@ const ProductDetails = ({ product }) => {
                         <span>{ratings}</span>
                         <Rating style={{ maxWidth: 120 }} value={ratings} readOnly />
                     </p>
-                    <Link to={`/product/${_id}`}>
+                    <Link to={`/product/${id}`}>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">Details</button>
                         </div>

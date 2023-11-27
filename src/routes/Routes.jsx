@@ -17,7 +17,7 @@ const router = createBrowserRouter([
             {
                 path: "/product/:id",
                 element: <SingleProduct />,
-                loader: ({ params }) => fetch(`/${params.id}`),
+                loader: ({ params }) => fetch(`${import.meta.env.VITE_API_Url}/product/${params.id}`),
             }
         ]
     },

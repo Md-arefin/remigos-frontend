@@ -1,8 +1,12 @@
 import React from 'react';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { useLoaderData } from 'react-router-dom';
 
-const SingleProduct = (product) => {
+const SingleProduct = () => {
+
+    const product = useLoaderData();
+
     const { _id, category, img, name, price, ratings, seller, shipping, stock } = product;
 
     return (
