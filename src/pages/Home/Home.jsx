@@ -7,9 +7,10 @@ const Home = () => {
     const [productsData, setProductsData] = useState([]);
 
     useEffect(() => {
-        fetch('/products.json')
+        fetch(`${import.meta.env.VITE_API_Url}/products`)
             .then(res => res.json())
             .then(data => {
+                console.log(data);
                 setProducts(data)
                 setProductsData(data);
             });
